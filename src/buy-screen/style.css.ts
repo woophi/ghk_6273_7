@@ -63,6 +63,24 @@ const btmContent = style({
   padding: 0,
 });
 
+const informerGreen = style({
+  padding: '.5rem 1rem',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '12px',
+  borderRadius: '12px',
+  backgroundColor: '#E9F7D9',
+});
+
+const greyBox = style({
+  padding: '1rem',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1rem',
+  borderRadius: '1rem',
+  backgroundColor: '#F2F3F5',
+});
+
 export const bsSt = {
   bottomBtn,
   container,
@@ -73,4 +91,6 @@ export const bsSt = {
   rowSmall,
   row,
   btmContent,
+  informerGreen,
+  greyBox,
 };

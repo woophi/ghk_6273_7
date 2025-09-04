@@ -12,7 +12,7 @@ import { ThxLayout } from './thx/ThxLayout';
 export const App = () => {
   const [thxShow, setThx] = useState(LS.getItem(LSKeys.ShowThx, false));
   const [selectedStockTicker, setSelectedStockTicker] = useState<string | null>(
-    LS.getItem(LSKeys.SelectedStockTicker, null),
+    LS.getItem(LSKeys.ShowThx, false) ? LS.getItem(LSKeys.SelectedStockTicker, null) : null,
   );
   const { stocks } = useStocksData();
 
@@ -60,7 +60,7 @@ export const App = () => {
                 var: 'var7',
                 ticker: s.ticker,
               });
-              // LS.setItem(LSKeys.SelectedStockTicker, s.ticker);
+              LS.setItem(LSKeys.SelectedStockTicker, s.ticker);
               setSelectedStockTicker(s.ticker);
             }}
           />
