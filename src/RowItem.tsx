@@ -29,7 +29,7 @@ export const RowItem = (props: Props) => {
             view="withZeroMinorPart"
             transparentMinor={false}
           />
-          <Typography.Text view="primary-small" color={stockItem.delta.includes('-') ? 'negative' : 'positive'}>
+          <Typography.Text view="primary-small" color={Number(stockItem.delta) < 0 ? 'negative' : 'positive'}>
             <Amount
               value={Number(stockItem.delta) * 100}
               minority={100}
