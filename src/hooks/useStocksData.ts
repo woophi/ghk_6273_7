@@ -24,9 +24,7 @@ export const useStocksData = () => {
     const fetchData = async () => {
       const response = await fetch('https://gist.githubusercontent.com/nsdooris/47f58504a837227f958a026649960aac/raw/');
       const data = (await response.json()) as { stocks: StockItem[] };
-      setStocks(
-        data.stocks.map(item => ({ ...item, delta: item.delta.replace('%', ''), img: TICKER_TO_IMAGE[item.ticker] })),
-      );
+      setStocks(data.stocks.map(item => ({ ...item, img: TICKER_TO_IMAGE[item.ticker] })));
       setLoading(false);
     };
 
