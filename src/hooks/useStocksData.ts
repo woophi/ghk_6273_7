@@ -11,7 +11,7 @@ export const TICKER_TO_IMAGE: Record<string, string> = {
   SBER: sberImg,
   T: tbankImg,
   PLZL: goldImg,
-  YNDX: yandexImg,
+  YDEX: yandexImg,
   TRNFP: neftImg,
   LKOH: lukolImg,
 };
